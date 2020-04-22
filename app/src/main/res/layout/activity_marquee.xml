@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="系统自带的跑马灯效果TextView,需要获取焦点才能滚动" />
+
+    <com.demo.customview.MarqueeTextView
+        android:id="@+id/marqueeTextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="不不不可以控制速度,暂停,开始,滚到方向的跑马灯" />
+
+    <com.demo.customview.MarqueeTextView2
+        android:id="@+id/marqueeTextView2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="我是可以控制速度,暂停,开始,滚动方向的跑马灯" />
+
+
+</LinearLayout>

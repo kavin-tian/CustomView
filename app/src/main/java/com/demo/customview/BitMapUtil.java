@@ -1,11 +1,15 @@
 package com.demo.customview;
 
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 /**
@@ -62,4 +66,38 @@ public class BitMapUtil {
         canvas.drawBitmap(source, 0, 0, paint);
         return target;
     }
+
+    /**
+     * Drawable转换成一个Bitmap
+     *
+     * @param drawable drawable对象
+     * @return
+     */
+    public static final Bitmap drawableToBitmap(Drawable drawable) {
+        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
+                drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+        drawable.draw(canvas);
+        return bitmap;
+    }
+
+    public static Bitmap drawableToBitamp2(Drawable drawable) {
+        BitmapDrawable bd = (BitmapDrawable) drawable;
+        Bitmap bitmap = bd.getBitmap();
+        return bitmap;
+    }
+
+
+    public static Drawable bitampTodrawable(Bitmap bitmap) {
+        Drawable drawable = new BitmapDrawable(bitmap);
+        return drawable;
+    }
+
+    public static Drawable bitampTodrawable2(Resources resources, Bitmap bitmap) {
+        BitmapDrawable drawable = new BitmapDrawable(resources, bitmap);
+        return drawable;
+    }
+
+
 }

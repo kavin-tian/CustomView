@@ -40,6 +40,7 @@
         <activity android:name=".ui.StellarMapActivity" />
         <activity android:name=".ui.IOSScrollViewActivity" />
         <activity android:name=".ui.RoundViewActivity" />
+        <activity android:name=".ui.MarqueeActivity" />
 
     </application>
 

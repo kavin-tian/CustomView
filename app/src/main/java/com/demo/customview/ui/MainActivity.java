@@ -45,5 +45,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onClick5(View view) {
 
+    }
+    public void onClick6(View view) {
+        Intent intent = new Intent(this, MarqueeActivity.class);
+        startActivity(intent);
+
+    }
 }
