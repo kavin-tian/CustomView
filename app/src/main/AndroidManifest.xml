@@ -41,6 +41,7 @@
         <activity android:name=".ui.IOSScrollViewActivity" />
         <activity android:name=".ui.RoundViewActivity" />
         <activity android:name=".ui.MarqueeActivity" />
+        <activity android:name=".ui.ToggleButtonActivity" />
 
     </application>
 
