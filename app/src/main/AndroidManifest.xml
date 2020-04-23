@@ -42,6 +42,8 @@
         <activity android:name=".ui.RoundViewActivity" />
         <activity android:name=".ui.MarqueeActivity" />
         <activity android:name=".ui.ToggleButtonActivity" />
+        <activity android:name=".chart.LineChartActivity" />
+        <activity android:name=".chart.LineChartActivity1" />
 
     </application>
 

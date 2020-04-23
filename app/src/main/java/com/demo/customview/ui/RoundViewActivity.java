@@ -15,6 +15,9 @@ import com.demo.customview.R;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
+/**
+ * 圆形头像处理
+ */
 public class RoundViewActivity extends FragmentActivity {
 
     @Override
@@ -34,8 +37,8 @@ public class RoundViewActivity extends FragmentActivity {
         // 如果显示空白使用明文通信,清单配置稳健者 <application 标签中 添加android:usesCleartextTraffic="true"
         //Picasso要添加依赖才能用哦
         Picasso.with(this).load(url)
-                .error(circleDrawable)
-                .placeholder(circleDrawable)
+                .error(circleDrawable)//加载失败后显示的图片
+                .placeholder(circleDrawable)//占位图片
                 .transform(new Transformation() {
             @Override
             public Bitmap transform(Bitmap source) { //加工图片

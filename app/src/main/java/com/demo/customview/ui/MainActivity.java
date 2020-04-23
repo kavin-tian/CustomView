@@ -5,13 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.demo.customview.R;
-import com.demo.customview.ui.CircleProgressBarActivity;
-import com.demo.customview.ui.StellarMapActivity;
-import com.squareup.picasso.Picasso;
+import com.demo.customview.chart.LineChartActivity;
+import com.demo.customview.chart.LineChartActivity1;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,6 +49,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClick6(View view) {
         Intent intent = new Intent(this, MarqueeActivity.class);
+        startActivity(intent);
+
+    }
+    public void onClick7(View view) {
+        Intent intent = new Intent(this, LineChartActivity.class);
+        startActivity(intent);
+
+    }
+    public void onClick8(View view) {
+        Intent intent = new Intent(this, LineChartActivity1.class);
         startActivity(intent);
 
     }
