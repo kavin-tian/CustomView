@@ -44,6 +44,8 @@
         <activity android:name=".ui.ToggleButtonActivity" />
         <activity android:name=".chart.LineChartActivity" />
         <activity android:name=".chart.LineChartActivity1" />
+        <activity android:name=".chart.BarChartActivity" />
+        <activity android:name=".chart.PieChartActivity" />
 
     </application>
 

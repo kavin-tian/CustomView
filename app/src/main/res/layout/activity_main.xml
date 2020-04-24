@@ -63,6 +63,18 @@
             android:layout_margin="10dp"
             android:onClick="onClick8"
             android:text="8. MPAndroid 折线图表LineChartActivity1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick9"
+            android:text="9. MPAndroid 柱状图表BarChartActivity" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick10"
+            android:text="10. MPAndroid 饼状图表PicChartActivity" />
 
 
     </LinearLayout>

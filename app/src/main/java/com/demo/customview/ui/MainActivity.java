@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.demo.customview.R;
+import com.demo.customview.chart.BarChartActivity;
 import com.demo.customview.chart.LineChartActivity;
 import com.demo.customview.chart.LineChartActivity1;
+import com.demo.customview.chart.PieChartActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,5 +63,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LineChartActivity1.class);
         startActivity(intent);
 
+    }
+
+    public void onClick9(View view) {
+        Intent intent = new Intent(this, BarChartActivity.class);
+        startActivity(intent);
+    }
+    public void onClick10(View view) {
+        Intent intent = new Intent(this, PieChartActivity.class);
+        startActivity(intent);
     }
 }
