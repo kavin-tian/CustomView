@@ -22,23 +22,21 @@ public class BitMapUtil {
      * wf.wh必须不能是int
      *
      * @param source
-     * @param wf
-     * @param hf
+     * @param wf 指定的宽度
+     * @param hf 指定的高度
      * @return
      */
     public static Bitmap zoom(Bitmap source, float wf, float hf) {
         Matrix matrix = new Matrix();
         float sx = wf / source.getWidth();
         float sy = hf / source.getHeight();
-        Log.e("zoubo", "sx---:" + sx);
-        matrix.postScale(sx, sy);
+        matrix.postScale(sx, sy);//矩阵
         return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
     }
 
 
     /**
      * 头像圆形裁剪
-     *
      * @param source
      * @return
      */
@@ -64,6 +62,31 @@ public class BitMapUtil {
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         //使用设置了setXfermode方案的paint绘制图像
         canvas.drawBitmap(source, 0, 0, paint);
+        return target;
+    }
+
+    /**
+     * 头像圆形裁剪
+     * @param pic 需要裁减的图片
+     * @param shape 需要裁减形状
+     * @return
+     */
+    public static Bitmap circleBitMap2(Bitmap pic,Bitmap shape) {
+        final Paint paint = new Paint();
+        //抗锯齿效果
+        int width = pic.getWidth();
+        paint.setAntiAlias(true);
+        //指定大小bitmap
+        Bitmap target = Bitmap.createBitmap(width, width, Bitmap.Config.ARGB_8888);
+        //根据target生成一个画布
+        Canvas canvas = new Canvas(target);
+
+        canvas.drawBitmap(shape, 0, 0, paint);
+
+        //PorterDuff.Mode.SRC_IN 取两层图像交集部门,只显示上层图像,注意这里是指取相交叉的部分,然后显示上层图像
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        //使用设置了setXfermode方案的paint绘制图像
+        canvas.drawBitmap(pic, 0, 0, paint);
         return target;
     }
 
