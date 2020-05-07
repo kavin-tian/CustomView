@@ -1,2 +1,2 @@
 rootProject.name='CustomView'
-include ':app'
+include ':app',':pullToRefresh'

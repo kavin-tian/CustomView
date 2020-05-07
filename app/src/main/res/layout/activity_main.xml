@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:onClick="onClick41"
+            android:onClick="onClick4_1"
             android:text="4.1 心形头像处理" />
         <TextView
             android:layout_width="wrap_content"
@@ -83,6 +83,12 @@
             android:onClick="onClick10"
             android:text="10. MPAndroid 饼状图表PicChartActivity" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick11"
+            android:text="11. PullToRefresh下拉刷新,上拉加载更多" />
 
     </LinearLayout>
 

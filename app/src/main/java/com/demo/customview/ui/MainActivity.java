@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClick41(View view) {
+    public void onClick4_1(View view) {
         Intent intent = new Intent(this, LoveViewActivity.class);
         startActivity(intent);
     }
@@ -75,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClick10(View view) {
         Intent intent = new Intent(this, PieChartActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void onClick11(View view) {
+        Intent intent = new Intent(this, PullToRefreshActivity.class);
         startActivity(intent);
     }
 
