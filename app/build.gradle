@@ -44,4 +44,7 @@ dependencies {
     //MPAndroidChart图表用到的
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.google.android.material:material:1.1.0'
+
+    //根据.svg格式的图片自定义各种形状的图片
+    implementation 'com.mostafagazar:customshapeimageview:1.0.1'
 }

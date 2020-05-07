@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClick41(View view) {
+        Intent intent = new Intent(this, LoveViewActivity.class);
+        startActivity(intent);
+    }
 
     public void onClick5(View view) {
         Intent intent = new Intent(this, ToggleButtonActivity.class);
@@ -73,4 +77,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PieChartActivity.class);
         startActivity(intent);
     }
+
+
 }
