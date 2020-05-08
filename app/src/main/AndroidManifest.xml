@@ -47,6 +47,7 @@
         <activity android:name=".ui.PinnedActivity" />
         <activity android:name=".ui.PhotoViewActivity" />
         <activity android:name=".ui.MatrixActivity" />
+        <activity android:name=".ui.SmartRefreshLayoutActivity" />
 
     </application>
 
