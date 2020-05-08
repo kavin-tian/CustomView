@@ -90,6 +90,27 @@
             android:onClick="onClick11"
             android:text="11. PullToRefresh下拉刷新,上拉加载更多" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick12"
+            android:text="12. PinnedSectionListView,可固定条目的列表" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick13"
+            android:text="13. PhotoView 图片支持手势缩放平移" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick14"
+            android:text="13. Matrix 矩阵操作图片缩放,平移,旋转,扭曲" />
+
     </LinearLayout>
 
 </ScrollView>

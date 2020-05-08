@@ -3,6 +3,7 @@ package com.demo.customview;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
@@ -80,8 +81,12 @@ public class IOSScrollView extends ScrollView {
      * 判断是否在ScrollView底部，在顶部时可以上拉
      */
     private boolean isScrollViewBottom() {
-        if (contentView.getMeasuredHeight() <= getScrollY() + getHeight())
+        //getScrollY()获取控件最上边缘 距离 初始位置0 的距离, 往上滑是加,最小是0.
+        //getHeight()控件的高度固定值
+        //contentView.getMeasuredHeight()控件的测量高度 固定值
+        if (getScrollY() + getHeight() >= contentView.getMeasuredHeight()) {
             return true;
+        }
         return false;
     }
 
@@ -115,6 +120,13 @@ public class IOSScrollView extends ScrollView {
                 break;
 
             case MotionEvent.ACTION_MOVE:
+
+//                Log.e("TAG", "contentView.getMeasuredHeight(): " + contentView.getMeasuredHeight());
+//                Log.e("TAG", "getScrollY(): " + getScrollY());
+//                Log.e("TAG", "getHeight(): " + getHeight());
+//                Log.e("TAG", "getMeasuredHeight(): " + getMeasuredHeight());
+//                Log.e("TAG", "getTop(): " + getTop());
+
                 // 如果不在ScrollView的最顶部或最底部（startY需要是在最顶部或最底部时按下的坐标）
                 if (!isCanPullUp && !isCanPullDown) {
                     startY = ev.getY();

@@ -48,4 +48,6 @@ dependencies {
     //根据.svg格式的图片自定义各种形状的图片
     implementation 'com.mostafagazar:customshapeimageview:1.0.1'
     implementation project(path: ':pullToRefresh')
+    implementation project(path: ':photolibrary')
+
 }

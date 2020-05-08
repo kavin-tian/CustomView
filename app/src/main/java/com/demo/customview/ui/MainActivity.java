@@ -83,6 +83,18 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PullToRefreshActivity.class);
         startActivity(intent);
     }
+    public void onClick12(View view) {
+        Intent intent = new Intent(this, PinnedActivity.class);
+        startActivity(intent);
+    }
+    public void onClick13(View view) {
+        Intent intent = new Intent(this, PhotoViewActivity.class);
+        startActivity(intent);
+    }
+    public void onClick14(View view) {
+        Intent intent = new Intent(this, MatrixActivity.class);
+        startActivity(intent);
+    }
 
 
 }

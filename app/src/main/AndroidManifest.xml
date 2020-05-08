@@ -44,6 +44,9 @@
         <activity android:name=".chart.BarChartActivity" />
         <activity android:name=".chart.PieChartActivity" />
         <activity android:name=".ui.PullToRefreshActivity" />
+        <activity android:name=".ui.PinnedActivity" />
+        <activity android:name=".ui.PhotoViewActivity" />
+        <activity android:name=".ui.MatrixActivity" />
 
     </application>
 
