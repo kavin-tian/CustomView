@@ -45,6 +45,14 @@
             android:layout_margin="10dp"
             android:onClick="onClick4_1"
             android:text="4.1 心形头像处理" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick4_2"
+            android:text="4.2 圆角图片处理" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,24 +66,28 @@
             android:layout_margin="10dp"
             android:onClick="onClick6"
             android:text="6. 跑马灯" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick7"
             android:text="7. MPAndroid 折线图表LineChartActivity" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick8"
             android:text="8. MPAndroid 折线图表LineChartActivity1" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick9"
             android:text="9. MPAndroid 柱状图表BarChartActivity" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,6 +129,7 @@
             android:layout_margin="10dp"
             android:onClick="onClick15"
             android:text="15. SmartRefreshLayout 聪明的下拉刷新,上拉加载更多控件" />
+
 
     </LinearLayout>
 
