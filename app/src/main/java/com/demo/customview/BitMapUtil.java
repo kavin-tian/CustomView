@@ -66,7 +66,7 @@ public class BitMapUtil {
     }
 
     /**
-     * 头像圆形裁剪
+     * 头像圆形裁剪,根据两张图片进行叠加
      * @param pic 需要裁减的图片
      * @param shape 需要裁减形状
      * @return

@@ -57,6 +57,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:onClick="onClick4_3"
+            android:text="4.3 圆边框的图片" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:onClick="onClick5"
             android:text="5. 开关按钮ToggleButton" />
 

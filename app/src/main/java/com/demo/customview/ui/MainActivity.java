@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClick4_3(View view) {
+        Intent intent = new Intent(this, CircleImageViewActivity.class);
+        startActivity(intent);
+    }
+
     public void onClick5(View view) {
         Intent intent = new Intent(this, ToggleButtonActivity.class);
         startActivity(intent);
@@ -105,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SmartRefreshLayoutActivity.class);
         startActivity(intent);
     }
+
+
 
 
 }
