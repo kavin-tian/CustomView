@@ -111,7 +111,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
-
+    public void onClick16(View view) {
+        Intent intent = new Intent(this, MySmartRefreshLayoutActivity.class);
+        startActivity(intent);
+    }
 }

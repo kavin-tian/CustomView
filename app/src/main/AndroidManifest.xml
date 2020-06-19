@@ -23,7 +23,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".ui.CircleImageViewActivity"></activity>
+        <activity android:name=".ui.MySmartRefreshLayoutActivity"></activity>
+        <activity android:name=".ui.CircleImageViewActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

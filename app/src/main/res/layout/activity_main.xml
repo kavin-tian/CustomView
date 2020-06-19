@@ -136,6 +136,12 @@
             android:layout_margin="10dp"
             android:onClick="onClick15"
             android:text="15. SmartRefreshLayout 聪明的下拉刷新,上拉加载更多控件" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick16"
+            android:text="16. 自定义刷新头SmartRefreshLayout" />
 
 
     </LinearLayout>
