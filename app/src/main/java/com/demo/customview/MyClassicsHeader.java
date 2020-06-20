@@ -120,16 +120,16 @@ public class MyClassicsHeader extends LinearLayout implements RefreshHeader {
         switch (newState) {
             //1,下拉刷新的开始状态：下拉可以刷新
             case PullDownToRefresh:
-                status.setText("下拉可以刷新");
+                status.setText("下拉刷新");
                 break;
             //2,下拉到最底部的状态：释放立即刷新
             case ReleaseToRefresh:
-                status.setText("释放立即刷新");
+                status.setText("松开刷新");
                 mProgressDrawable.start();
                 break;
             //3,下拉到最底部后松手的状态：正在刷新
             case Refreshing:
-                status.setText("正在刷新");
+                status.setText("正在刷新...");
                 break;
         }
     }
