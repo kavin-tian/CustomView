@@ -14,4 +14,11 @@
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
+
+
+    <declare-styleable name="FilletImageView">
+        <attr name="filletImageRadius" format="dimension" />
+        <attr name="topLeftRightCorner" format="boolean" />
+        <attr name="bottomLeftRightCorner" format="boolean" />
+    </declare-styleable>
 </resources>
