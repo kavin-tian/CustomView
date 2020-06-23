@@ -1,6 +1,8 @@
 package com.demo.customview;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -18,11 +20,13 @@ import java.util.HashMap;
 
 public class FadeBanner extends FrameLayout {
     private static final float MIN_OFFSET_PX = 5;//最小位移像素
+    private static final long PLAY_DELAY = 3000;
     Context context;
     private OnClickListener onClickListener;
     private OnPageChangeListener onPageChangeListener;
     private ArrayList<Integer> imgeList = new ArrayList<Integer>();
     private HashMap<Integer, ImageView> mImgMap = new HashMap<Integer, ImageView>();
+
     public FadeBanner(@NonNull Context context) {
         super(context);
         initview(context);
@@ -36,6 +40,27 @@ public class FadeBanner extends FrameLayout {
     public FadeBanner(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initview(context);
+    }
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 0:
+                    startAlphaAnimation();
+                    break;
+            }
+        }
+    };
+
+    /**
+     * 播放下一张
+     */
+    private void playNext() {
+        isHasUnderImage = false;
+        ImageView imageView = mImgMap.get(getNextPosition());
+        setUnderImage(imageView);
+        handler.sendEmptyMessageDelayed(0, PLAY_DELAY);
     }
 
     private void initview(Context context) {
@@ -52,6 +77,8 @@ public class FadeBanner extends FrameLayout {
             mImgMap.put(i, imageView);
         }
         addView(mImgMap.get(mImgMap.size() - 1));
+        //开始轮播
+        playNext();
     }
 
     /**
@@ -64,23 +91,25 @@ public class FadeBanner extends FrameLayout {
 
     float downX = 0;
     float offset = 0;
-    boolean isMoving = false;
+    boolean isHasUnderImage = false;
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                isMoving = false;
+                isHasUnderImage = false;
                 downX = event.getX();
                 break;
             case MotionEvent.ACTION_MOVE:
+                //触摸是停止轮播
+                handler.removeMessages(0);
                 float moveX = event.getX();
                 offset = moveX - downX;
                 slider(offset);
                 break;
             case MotionEvent.ACTION_UP:
-                startAlphaAnimation(offset);
+                startAlphaAnimation();
                 setOnClick(offset);
                 break;
         }
@@ -97,7 +126,6 @@ public class FadeBanner extends FrameLayout {
             if (onClickListener != null) {
                 int index = (int) imageView.getTag();
                 onClickListener.onClick(imageView, index);
-
             }
         }
     }
@@ -107,13 +135,9 @@ public class FadeBanner extends FrameLayout {
     /**
      * 开始渐变动画
      */
-    private void startAlphaAnimation(float offset) {
+    private void startAlphaAnimation() {
 
         if (mImgMap.size() <= 1) {
-            return;
-        }
-
-        if (Math.abs(offset) <= MIN_OFFSET_PX) {
             return;
         }
 
@@ -123,15 +147,12 @@ public class FadeBanner extends FrameLayout {
 
         int childCount = getChildCount();
         final ImageView currentImageView = (ImageView) getChildAt(childCount - 1);
-
         float alpha = currentImageView.getAlpha();
         //透明度变化
         AlphaAnimation alphaAnimation = new AlphaAnimation(alpha, 0.0f);//第一个参数开始的透明度，第二个参数结束的透明度
         alphaAnimation.setDuration(500);//多长时间完成这个动作
         //动画终止时停留在最后一帧
         //alphaAnimation.setFillEnabled(true);
-        //重复执行次数
-        //alphaAnimation.setRepeatCount(1);
         alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -149,6 +170,14 @@ public class FadeBanner extends FrameLayout {
                     removeView(currentImageView);
                 }
 
+                if (onPageChangeListener != null) {
+                    //获取当前显示的图片
+                    View showView = getChildAt(getChildCount() - 1);
+                    int index = (Integer) showView.getTag();
+                    onPageChangeListener.onImageChange(index);
+                }
+
+                playNext();
                 isRunningAnimation = false;
             }
 
@@ -211,16 +240,12 @@ public class FadeBanner extends FrameLayout {
     private void setUnderImage(ImageView imageView) {
 
         //一次触摸事件只执行一次
-        if (!isMoving) {
-            isMoving = true;
+        if (!isHasUnderImage) {
+            isHasUnderImage = true;
             if (getChildCount() > 1) {
                 removeViewAt(0);
             }
             addView(imageView, 0);
-            if (onPageChangeListener != null) {
-                int index = (Integer) imageView.getTag();
-                onPageChangeListener.onImageChange(index);
-            }
         }
     }
 
