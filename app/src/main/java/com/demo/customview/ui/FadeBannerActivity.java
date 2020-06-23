@@ -31,7 +31,7 @@ public class FadeBannerActivity extends AppCompatActivity {
 
         fadeBanner.setImgeList(list);
         //重第二张开始播放
-        fadeBanner.setPosition(2);
+        fadeBanner.setPosition(3);
         int position = fadeBanner.getCurrentPosition();
         tv.setText("当前页为: "+position);
         fadeBanner.setOnClickListener(new FadeBanner.OnClickListener() {
@@ -44,7 +44,6 @@ public class FadeBannerActivity extends AppCompatActivity {
             @Override
             public void onImageChange(int index) {
                 tv.setText("当前页为: " + index);
-//                Toast.makeText(FadeBannerActivity.this, "OnPageChange: " + index, Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -293,7 +293,6 @@ public class FadeBanner extends FrameLayout {
         if (position > mImgMap.size() - 1) {
             throw new IllegalArgumentException("index out of range!");
         }
-
         if (position != getCurrentPosition()) {
             addView(mImgMap.get(position));
             removeUnderImage();

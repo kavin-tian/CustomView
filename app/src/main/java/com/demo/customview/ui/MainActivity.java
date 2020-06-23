@@ -119,4 +119,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FadeBannerActivity.class);
         startActivity(intent);
     }
+
+    public void onClick18(View view) {
+        Intent intent = new Intent(this, BottomSheetLayoutActivity.class);
+        startActivity(intent);
+    }
 }

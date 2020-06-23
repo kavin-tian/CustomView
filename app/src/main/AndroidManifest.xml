@@ -50,6 +50,7 @@
         <activity android:name=".ui.SmartRefreshLayoutActivity" />
         <activity android:name=".ui.RoundImageViewActivity" />
         <activity android:name=".ui.FadeBannerActivity" />
+        <activity android:name=".ui.BottomSheetLayoutActivity" />
     </application>
 
 </manifest>
