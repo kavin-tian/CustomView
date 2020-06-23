@@ -102,7 +102,7 @@ public class FadeBanner extends FrameLayout {
                 downX = event.getX();
                 break;
             case MotionEvent.ACTION_MOVE:
-                //触摸是停止轮播
+                //触摸时停止轮播
                 handler.removeMessages(0);
                 float moveX = event.getX();
                 offset = moveX - downX;
@@ -141,7 +141,7 @@ public class FadeBanner extends FrameLayout {
             return;
         }
 
-        if (isRunningAnimation) {
+        if (isRunningAnimation) {//正在执行动画
             return;
         }
 
@@ -170,14 +170,14 @@ public class FadeBanner extends FrameLayout {
                     removeView(currentImageView);
                 }
 
-                if (onPageChangeListener != null) {
+                if (onPageChangeListener != null) { //设置页面改变监听
                     //获取当前显示的图片
                     View showView = getChildAt(getChildCount() - 1);
                     int index = (Integer) showView.getTag();
                     onPageChangeListener.onImageChange(index);
                 }
 
-                playNext();
+                playNext();//进行轮播
                 isRunningAnimation = false;
             }
 
@@ -230,9 +230,7 @@ public class FadeBanner extends FrameLayout {
             ImageView imageView = mImgMap.get(getNextPosition());
             setUnderImage(imageView);
         }
-
     }
-
 
     /**
      * 设置位于下面的图片
@@ -249,12 +247,10 @@ public class FadeBanner extends FrameLayout {
         }
     }
 
-
     /**
      * 获取当前图片的索引
      */
     private int getCurrentPosition() {
-
         //当前图片集合只有一张图片时, 上一张就 自己
         if (mImgMap.size() <= 1) {
             return 0;
@@ -262,7 +258,6 @@ public class FadeBanner extends FrameLayout {
         int prePosition = 0;
         int topIndex = getChildCount() - 1;
         int currentPosition = (int) getChildAt(topIndex).getTag();
-
         return currentPosition;
     }
 
@@ -270,7 +265,6 @@ public class FadeBanner extends FrameLayout {
      * 获取上一张的索引
      */
     private int getPrePosition() {
-
         //当前图片集合只有一张图片时, 上一张就 自己
         if (mImgMap.size() <= 1) {
             return 0;
@@ -291,7 +285,6 @@ public class FadeBanner extends FrameLayout {
      * 获取下一张的索引
      */
     private int getNextPosition() {
-
         //当前图片集合只有一张图片时, 上一张就 自己
         if (mImgMap.size() <= 1) {
             return 0;
@@ -312,6 +305,9 @@ public class FadeBanner extends FrameLayout {
         return nextPosition;
     }
 
+    /**
+     * 监听接口
+     */
     public void setOnClickListener(OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
     }
