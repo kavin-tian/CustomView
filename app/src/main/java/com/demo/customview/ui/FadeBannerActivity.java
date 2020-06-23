@@ -30,6 +30,10 @@ public class FadeBannerActivity extends AppCompatActivity {
         list.add(R.mipmap.slide3);
 
         fadeBanner.setImgeList(list);
+        //重第二张开始播放
+        fadeBanner.setPosition(2);
+        int position = fadeBanner.getCurrentPosition();
+        tv.setText("当前页为: "+position);
         fadeBanner.setOnClickListener(new FadeBanner.OnClickListener() {
             @Override
             public void onClick(View v, int index) {
