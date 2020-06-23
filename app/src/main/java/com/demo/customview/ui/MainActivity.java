@@ -115,4 +115,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MySmartRefreshLayoutActivity.class);
         startActivity(intent);
     }
+    public void onClick17(View view) {
+        Intent intent = new Intent(this, FadeBannerActivity.class);
+        startActivity(intent);
+    }
 }
