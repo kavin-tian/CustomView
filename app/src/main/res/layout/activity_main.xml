@@ -157,6 +157,13 @@
             android:onClick="onClick18"
             android:text="18. 第三方弹出对话框效果BottomSheetLayout" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick19"
+            android:text="19. 仿饿了么添加购物车动画 贝塞尔曲线" />
+
 
     </LinearLayout>
 

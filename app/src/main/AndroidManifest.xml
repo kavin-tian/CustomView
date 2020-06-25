@@ -51,6 +51,7 @@
         <activity android:name=".ui.RoundImageViewActivity" />
         <activity android:name=".ui.FadeBannerActivity" />
         <activity android:name=".ui.BottomSheetLayoutActivity" />
+        <activity android:name=".anim.AnimationActivity" />
     </application>
 
 </manifest>

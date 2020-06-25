@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.demo.customview.R;
+import com.demo.customview.anim.AnimationActivity;
 import com.demo.customview.chart.BarChartActivity;
 import com.demo.customview.chart.LineChartActivity;
 import com.demo.customview.chart.LineChartActivity1;
@@ -122,6 +123,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick18(View view) {
         Intent intent = new Intent(this, BottomSheetLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick19(View view) {
+        Intent intent = new Intent(this, AnimationActivity.class);
         startActivity(intent);
     }
 }
