@@ -52,6 +52,7 @@
         <activity android:name=".ui.FadeBannerActivity" />
         <activity android:name=".ui.BottomSheetLayoutActivity" />
         <activity android:name=".anim.AnimationActivity" />
+        <activity android:name=".ui.SmartTabLayoutActivity" />
     </application>
 
 </manifest>

@@ -130,4 +130,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AnimationActivity.class);
         startActivity(intent);
     }
+
+    public void onClick20(View view) {
+        Intent intent = new Intent(this, SmartTabLayoutActivity.class);
+        startActivity(intent);
+    }
 }
