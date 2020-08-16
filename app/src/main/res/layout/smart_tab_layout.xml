@@ -38,9 +38,37 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:layout_below="@id/viewpagertab" />
 
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/viewpagertab2"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@android:color/darker_gray"
+            app:stl_clickable="false"
+            app:stl_customTabTextLayoutId="@layout/custom_tab_circle"
+            app:stl_dividerColor="@android:color/transparent"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorColor="@android:color/white"
+            app:stl_indicatorCornerRadius="4dp"
+            app:stl_indicatorGravity="center"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorThickness="6dp"
+            app:stl_underlineColor="@android:color/transparent"
+            app:stl_underlineThickness="0dp" />
+    </FrameLayout>
 
 </LinearLayout>
 

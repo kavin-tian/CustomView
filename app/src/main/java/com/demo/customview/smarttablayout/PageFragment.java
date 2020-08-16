@@ -1,4 +1,4 @@
-package com.demo.customview.ui;
+package com.demo.customview.smarttablayout;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,13 +13,6 @@ import com.demo.customview.R;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 
 public class PageFragment extends Fragment {
-
-    public PageFragment() {
-    }
-
-    public PageFragment(int contentLayoutId) {
-        super(contentLayoutId);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,

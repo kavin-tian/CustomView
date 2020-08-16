@@ -23,7 +23,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".ui.MySmartRefreshLayoutActivity"></activity>
+        <activity android:name=".banner.BannerActivity"></activity>
+        <activity android:name=".ui.MySmartRefreshLayoutActivity" />
         <activity android:name=".ui.CircleImageViewActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
@@ -52,7 +53,7 @@
         <activity android:name=".ui.FadeBannerActivity" />
         <activity android:name=".ui.BottomSheetLayoutActivity" />
         <activity android:name=".anim.AnimationActivity" />
-        <activity android:name=".ui.SmartTabLayoutActivity" />
+        <activity android:name=".smarttablayout.SmartTabLayoutActivity" />
     </application>
 
 </manifest>

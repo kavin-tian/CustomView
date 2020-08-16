@@ -1,9 +1,13 @@
-package com.demo.customview.ui;
+package com.demo.customview.smarttablayout;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.TypedValue;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,10 +21,85 @@ import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 
 public class SmartTabLayoutActivity extends AppCompatActivity {
+    private static final int WHAT_POSITION = 100;
+    private ViewPager viewPager;
+    private int positon = 0;
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == WHAT_POSITION) {
+                if (positon > 3) {
+                    positon = 0;
+                }
+                viewPager.setCurrentItem(positon, true);
+                handler.sendEmptyMessageDelayed(WHAT_POSITION, 3000);
+                positon++;
+            }
+        }
+    };
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.smart_tab_layout);
+
+        init1();
+        init2();
+    }
+
+    private void init2() {
+        final FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getSupportFragmentManager(), FragmentPagerItems.with(this)
+                .add("slide0", ImageFragment.class) //PageFragment必须是public修饰的类
+                .add("slide1", ImageFragment.class)
+                .add("slide2", ImageFragment.class)
+                .add("slide3", ImageFragment.class)
+                .create());
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager2);
+        viewPager.setAdapter(adapter);
+
+        final SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab2);
+        viewPagerTab.setViewPager(viewPager);
+
+        viewPagerTab.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                Toast.makeText(SmartTabLayoutActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+//        handler.sendEmptyMessageDelayed(WHAT_POSITION, 3000);
+        viewPager.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        handler.removeMessages(WHAT_POSITION);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        handler.sendEmptyMessageDelayed(WHAT_POSITION, 3000);
+                        break;
+                }
+                return false;
+            }
+        });
+
+    }
+
+    private void init1() {
         final FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
                 .add("今日更新", PageFragment.class) //PageFragment必须是public修饰的类
@@ -60,8 +139,6 @@ public class SmartTabLayoutActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     private void setTabTextColor(FragmentPagerItemAdapter adapter, SmartTabLayout viewPagerTab, int position) {
@@ -88,4 +165,9 @@ public class SmartTabLayoutActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeMessages(WHAT_POSITION);
+    }
 }

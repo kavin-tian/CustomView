@@ -8,10 +8,12 @@ import android.view.View;
 
 import com.demo.customview.R;
 import com.demo.customview.anim.AnimationActivity;
+import com.demo.customview.banner.BannerActivity;
 import com.demo.customview.chart.BarChartActivity;
 import com.demo.customview.chart.LineChartActivity;
 import com.demo.customview.chart.LineChartActivity1;
 import com.demo.customview.chart.PieChartActivity;
+import com.demo.customview.smarttablayout.SmartTabLayoutActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -135,4 +137,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SmartTabLayoutActivity.class);
         startActivity(intent);
     }
+
+    public void onClick21(View view) {
+        Intent intent = new Intent(this, BannerActivity.class);
+        startActivity(intent);
+    }
+
 }

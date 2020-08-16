@@ -172,6 +172,12 @@
             android:onClick="onClick20"
             android:text="20. 一个自定义的ViewPager tab指示SmartTabLayout" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick21"
+            android:text="21. 第三方轮播图+自定义指示器" />
 
     </LinearLayout>
 
