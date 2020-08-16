@@ -16,10 +16,11 @@
         android:layout_height="100dp"
         android:src="@mipmap/cgx" />
 
+    <!--topLeftRightCorner控制是否显示上下圆角-->
     <com.demo.customview.FilletImageView
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:src="@mipmap/cgx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/slide0"
         app:filletImageRadius="10dp"
         app:topLeftRightCorner="true" />
 </LinearLayout>

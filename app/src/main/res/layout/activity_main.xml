@@ -179,6 +179,13 @@
             android:onClick="onClick21"
             android:text="21. 第三方轮播图+自定义指示器" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick22"
+            android:text="22. 设置阴影,取代cardview" />
+
     </LinearLayout>
 
 </ScrollView>

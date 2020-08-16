@@ -142,5 +142,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BannerActivity.class);
         startActivity(intent);
     }
+    public void onClick22(View view) {
+        Intent intent = new Intent(this, ShadowLayoutActivity.class);
+        startActivity(intent);
+    }
 
 }
