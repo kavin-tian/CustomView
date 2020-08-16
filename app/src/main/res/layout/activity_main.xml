@@ -184,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:onClick="onClick22"
-            android:text="22. 设置阴影,取代cardview" />
+            android:text="22. 第三方ShadowLayout添加阴影,取代cardview" />
 
     </LinearLayout>
 
