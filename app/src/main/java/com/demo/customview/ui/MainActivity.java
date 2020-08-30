@@ -13,6 +13,7 @@ import com.demo.customview.chart.BarChartActivity;
 import com.demo.customview.chart.LineChartActivity;
 import com.demo.customview.chart.LineChartActivity1;
 import com.demo.customview.chart.PieChartActivity;
+import com.demo.customview.slideseemorelayout.GoodsDetailActivity;
 import com.demo.customview.smarttablayout.SmartTabLayoutActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -144,6 +145,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClick22(View view) {
         Intent intent = new Intent(this, ShadowLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick23(View view) {
+        Intent intent = new Intent(this, GoodsDetailActivity.class);
         startActivity(intent);
     }
 

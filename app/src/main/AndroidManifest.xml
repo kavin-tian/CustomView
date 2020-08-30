@@ -55,6 +55,7 @@
         <activity android:name=".ui.BottomSheetLayoutActivity" />
         <activity android:name=".anim.AnimationActivity" />
         <activity android:name=".smarttablayout.SmartTabLayoutActivity" />
+        <activity android:name=".slideseemorelayout.GoodsDetailActivity" />
     </application>
 
 </manifest>

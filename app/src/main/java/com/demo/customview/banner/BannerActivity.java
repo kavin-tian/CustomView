@@ -56,32 +56,10 @@ public class BannerActivity extends AppCompatActivity {
                         .into(holder.imageView);
             }
         })
-                .addBannerLifecycleObserver(this)//添加生命周期观察者
+                .addBannerLifecycleObserver(this)//添加生命周期观察者, 让banner自己管理生命周期
                 .setIndicator(new CircleIndicator(this));
         //更多使用方法仔细阅读文档，或者查看demo
 
-    }
-
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        //开始轮播
-        banner.start();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        //停止轮播
-        banner.stop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        //销毁
-        banner.destroy();
     }
 
 

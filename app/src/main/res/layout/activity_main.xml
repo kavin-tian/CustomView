@@ -186,6 +186,13 @@
             android:onClick="onClick22"
             android:text="22. 第三方ShadowLayout添加阴影,取代cardview" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="onClick23"
+            android:text="23. 京东、淘宝商品详情界面、下拉查看更多详情" />
+
     </LinearLayout>
 
 </ScrollView>

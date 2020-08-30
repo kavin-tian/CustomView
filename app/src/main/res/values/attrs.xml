@@ -41,5 +41,18 @@
         </attr>
     </declare-styleable>
 
+    <!-- 仿京东,淘宝上拉查看详情布局 -->
+    <declare-styleable name="SlideDetailsLayout">
+        <!-- 默认选中哪一个界面-->
+        <attr name="percent" format="float"/>
+        <!-- 回弹时间-->
+        <attr name="duration" format="integer"/>
+        <!-- 默认界面再初始化后显示-->
+        <attr name="default_panel" format="enum">
+            <enum name="front" value="0"/>
+            <enum name="behind" value="1"/>
+        </attr>
+    </declare-styleable>
+
 
 </resources>
