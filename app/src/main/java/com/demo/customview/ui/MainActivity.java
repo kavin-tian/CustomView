@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 
 import com.demo.customview.R;
 import com.demo.customview.anim.AnimationActivity;
@@ -150,6 +151,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick23(View view) {
         Intent intent = new Intent(this, GoodsDetailActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClick24(View view) {
+        Intent intent = new Intent(this, SlidingMenuActivity.class);
         startActivity(intent);
     }
 
