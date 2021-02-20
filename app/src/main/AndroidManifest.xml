@@ -23,12 +23,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
-        <activity android:name=".ui.SlidingMenuActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.SlidingMenuActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".ui.ShadowLayoutActivity" />
         <activity android:name=".banner.BannerActivity" />
         <activity android:name=".ui.MySmartRefreshLayoutActivity" />
         <activity android:name=".ui.CircleImageViewActivity" />
-        <activity android:name=".ui.MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,6 +61,7 @@
         <activity android:name=".anim.AnimationActivity" />
         <activity android:name=".smarttablayout.SmartTabLayoutActivity" />
         <activity android:name=".slideseemorelayout.GoodsDetailActivity" />
+        <activity android:name=".ui.NiceImageViewActivity" />
     </application>
 
 </manifest>

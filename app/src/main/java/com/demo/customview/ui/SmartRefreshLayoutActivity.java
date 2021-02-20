@@ -34,7 +34,7 @@ public class SmartRefreshLayoutActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         context = this;
-        initHeaderAndFooter();
+        //initHeaderAndFooter();
         setContentView(R.layout.activity_smart_refresh);
         refreshLayout = findViewById(R.id.refreshLayout);
         recyclerView = findViewById(R.id.recyclerView);

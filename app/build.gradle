@@ -73,4 +73,9 @@ dependencies {
     //view 设置阴影, 取代cardview
     implementation 'com.github.lihangleo2:ShadowLayout:3.0.1'
 
+    //支持圆角、圆形显示
+    //可绘制边框，圆形时可绘制内外两层边框
+    //https://github.com/SheHuan/NiceImageView
+    implementation 'com.github.SheHuan:NiceImageView:1.0.5'
+
 }

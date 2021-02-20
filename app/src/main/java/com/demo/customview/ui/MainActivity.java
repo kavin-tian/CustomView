@@ -63,21 +63,29 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClick4_4(View view) {
+        Intent intent = new Intent(this, NiceImageViewActivity.class);
+        startActivity(intent);
+    }
+
     public void onClick5(View view) {
         Intent intent = new Intent(this, ToggleButtonActivity.class);
         startActivity(intent);
 
     }
+
     public void onClick6(View view) {
         Intent intent = new Intent(this, MarqueeActivity.class);
         startActivity(intent);
 
     }
+
     public void onClick7(View view) {
         Intent intent = new Intent(this, LineChartActivity.class);
         startActivity(intent);
 
     }
+
     public void onClick8(View view) {
         Intent intent = new Intent(this, LineChartActivity1.class);
         startActivity(intent);
@@ -88,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BarChartActivity.class);
         startActivity(intent);
     }
+
     public void onClick10(View view) {
         Intent intent = new Intent(this, PieChartActivity.class);
         startActivity(intent);
@@ -98,14 +107,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PullToRefreshActivity.class);
         startActivity(intent);
     }
+
     public void onClick12(View view) {
         Intent intent = new Intent(this, PinnedActivity.class);
         startActivity(intent);
     }
+
     public void onClick13(View view) {
         Intent intent = new Intent(this, PhotoViewActivity.class);
         startActivity(intent);
     }
+
     public void onClick14(View view) {
         Intent intent = new Intent(this, MatrixActivity.class);
         startActivity(intent);
@@ -120,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MySmartRefreshLayoutActivity.class);
         startActivity(intent);
     }
+
     public void onClick17(View view) {
         Intent intent = new Intent(this, FadeBannerActivity.class);
         startActivity(intent);
@@ -144,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BannerActivity.class);
         startActivity(intent);
     }
+
     public void onClick22(View view) {
         Intent intent = new Intent(this, ShadowLayoutActivity.class);
         startActivity(intent);

@@ -46,9 +46,9 @@ public class BannerActivity extends AppCompatActivity {
 
     public void useBanner() {
         //—————————————————————————如果你想偷懒，而又只是图片轮播————————————————————————
-        banner.setAdapter(new BannerImageAdapter<DataBean>(DataBean.getTestData3()) {
+        banner.setAdapter(new BannerImageAdapter<BannerBean>(BannerBean.getTestData3()) {
             @Override
-            public void onBindView(BannerImageHolder holder, DataBean data, int position, int size) {
+            public void onBindView(BannerImageHolder holder, BannerBean data, int position, int size) {
                 //图片加载自己实现
                 Glide.with(holder.itemView)
                         .load(data.imageUrl)
@@ -58,6 +58,7 @@ public class BannerActivity extends AppCompatActivity {
         })
                 .addBannerLifecycleObserver(this)//添加生命周期观察者, 让banner自己管理生命周期
                 .setIndicator(new CircleIndicator(this));
+//                .setIndicator(new CircleIndicator(this));
         //更多使用方法仔细阅读文档，或者查看demo
 
     }

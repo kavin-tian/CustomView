@@ -64,6 +64,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:onClick="onClick4_4"
+            android:text="4.4 圆边框和圆角的图片 NiceImageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:onClick="onClick5"
             android:text="5. 开关按钮ToggleButton" />
 

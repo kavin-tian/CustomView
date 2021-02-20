@@ -1,25 +1,23 @@
 package com.demo.customview.banner;
 
 
-import com.demo.customview.R;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class DataBean {
+public class BannerBean {
     public Integer imageRes;
     public String imageUrl;
     public String title;
     public int viewType;
 
-    public DataBean(Integer imageRes, String title, int viewType) {
+    public BannerBean(Integer imageRes, String title, int viewType) {
         this.imageRes = imageRes;
         this.title = title;
         this.viewType = viewType;
     }
 
-    public DataBean(String imageUrl, String title, int viewType) {
+    public BannerBean(String imageUrl, String title, int viewType) {
         this.imageUrl = imageUrl;
         this.title = title;
         this.viewType = viewType;
@@ -62,13 +60,13 @@ public class DataBean {
         return list;
     }*/
 
-    public static List<DataBean> getTestData3() {
-        List<DataBean> list = new ArrayList<>();
-        list.add(new DataBean("https://img.zcool.cn/community/013de756fb63036ac7257948747896.jpg", null, 1));
-        list.add(new DataBean("https://img.zcool.cn/community/01639a56fb62ff6ac725794891960d.jpg", null, 1));
-        list.add(new DataBean("https://img.zcool.cn/community/01270156fb62fd6ac72579485aa893.jpg", null, 1));
-        list.add(new DataBean("https://img.zcool.cn/community/01233056fb62fe32f875a9447400e1.jpg", null, 1));
-        list.add(new DataBean("https://img.zcool.cn/community/016a2256fb63006ac7257948f83349.jpg", null, 1));
+    public static List<BannerBean> getTestData3() {
+        List<BannerBean> list = new ArrayList<>();
+        list.add(new BannerBean("https://img.zcool.cn/community/013de756fb63036ac7257948747896.jpg", null, 1));
+        list.add(new BannerBean("https://img.zcool.cn/community/01639a56fb62ff6ac725794891960d.jpg", null, 1));
+        list.add(new BannerBean("https://img.zcool.cn/community/01270156fb62fd6ac72579485aa893.jpg", null, 1));
+        list.add(new BannerBean("https://img.zcool.cn/community/01233056fb62fe32f875a9447400e1.jpg", null, 1));
+        list.add(new BannerBean("https://img.zcool.cn/community/016a2256fb63006ac7257948f83349.jpg", null, 1));
         return list;
     }
 
